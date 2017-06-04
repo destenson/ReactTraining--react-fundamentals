@@ -2,15 +2,16 @@ var React = require('react');
 var PropTypes = require('prop-types');
 
 function SelectLanguage (props) {
-  var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
+  var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python', 'C', 'C++', 'C#',
+    '.NET', 'AndroidStudio', 'gradle'];
   return (
-    <ul className='languages'>
+    <ul className='languages' >
       {languages.map(function (lang) {
         return (
           <li
             style={lang === props.selectedLanguage ? {color: '#d0021b'} : null}
             onClick={props.onSelect.bind(null, lang)}
-            key={lang}>
+            key={lang} >
               {lang}
           </li>
         )
